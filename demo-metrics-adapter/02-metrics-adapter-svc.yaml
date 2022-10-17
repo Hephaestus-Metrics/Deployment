@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: metrics-adapter
-  namespace: hephaestus
+  namespace: metrics-adapter
 spec:
   selector:
     app: hephaestus-gui
