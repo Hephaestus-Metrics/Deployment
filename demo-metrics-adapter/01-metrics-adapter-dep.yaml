@@ -18,7 +18,7 @@ spec:
           image: hephaestusmetrics/metrics-adapter:latest
           env:
           - name: backend
-            value: hephaestus-gui.hephaestus:31122
+            value: http://hephaestus-gui.hephaestus:31122
           imagePullPolicy: Always
           ports:
             - containerPort: 8085 
