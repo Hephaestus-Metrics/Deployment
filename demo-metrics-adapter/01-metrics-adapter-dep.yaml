@@ -21,4 +21,4 @@ spec:
             value: hephaestus-gui.hephaestus:8080
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 8085
