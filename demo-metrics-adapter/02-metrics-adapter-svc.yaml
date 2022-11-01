@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: metrics-adapter
-  type: LoadBalancer
+  type: NodePort
   ports:
     - protocol: "TCP"
       port: 8085
