@@ -5,9 +5,10 @@ metadata:
   namespace: metrics-adapter
 spec:
   selector:
-    app: hephaestus-gui
+    app: metrics-adapter
   type: LoadBalancer
   ports:
     - protocol: "TCP"
       port: 8085
       targetPort: 8085
+      nodePort: 31111
