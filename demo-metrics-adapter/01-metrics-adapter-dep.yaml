@@ -16,7 +16,7 @@ spec:
       containers:
         - name: metrics-adapter
           image: hephaestusmetrics/metrics-adapter:latest
-	  env:
+          env:
           - name: backend
             value: hephaestus-gui.hephaestus:8080
           imagePullPolicy: Always
