@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hephaestus-demo
+  namespace: hephaestus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hephaestus-demo
+  template:
+    metadata:
+      labels:
+        app: hephaestus-demo
+    spec:
+      containers:
+        - name: hephaestus-demo
+          image: hephaestusmetrics/demo:latest
+          env:
+          - name: pod
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: namespace
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8099

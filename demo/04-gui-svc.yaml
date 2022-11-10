@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hephaestus-demo
+  namespace: hephaestus
+spec:
+  selector:
+    app: hephaestus-demo
+  type: NodePort
+  ports:
+    - protocol: "TCP"
+      port: 8099
+      targetPort: 8099
+      nodePort: 31124
