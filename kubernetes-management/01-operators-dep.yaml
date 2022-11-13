@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: kubernetes-management
-          image: hephaestusmetrics/kubernetes-management:0.1
-          imagePullPolicy: Never
+          image: hephaestusmetrics/kubernetes-management:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8097
